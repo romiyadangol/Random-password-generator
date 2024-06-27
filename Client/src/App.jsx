@@ -34,19 +34,14 @@ function App() {
         </div>
 
         <div className="input-wrapper">
+          <input type="text" value={password} />
           <button onClick={generatePassword}>Regenerate</button>
-          {password && (
-            <div>
-              <h2>Password:</h2>
-              <input type="text" value={password} readOnly />
-            </div>
-          )}
         </div>
 
         <div className="password-generator">
-          <label htmlFor="length">Password Length:</label>
+          <label htmlFor="length">Password Length:{length} </label>
           <input
-            type="number"
+            type="range"
             id="length"
             value={length}
             onChange={(e) => setLength(e.target.value)}
